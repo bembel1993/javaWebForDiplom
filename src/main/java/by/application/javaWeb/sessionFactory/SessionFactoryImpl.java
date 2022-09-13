@@ -1,6 +1,7 @@
 package by.application.javaWeb.sessionFactory;
 
 import by.application.javaWeb.model.Person;
+import by.application.javaWeb.model.Product;
 import by.application.javaWeb.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -17,6 +18,7 @@ public class SessionFactoryImpl {
                 Configuration configuration = new Configuration().configure();
                 configuration.addAnnotatedClass(Person.class);
                 configuration.addAnnotatedClass(User.class);
+                configuration.addAnnotatedClass(Product.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());
 

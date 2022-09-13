@@ -51,9 +51,6 @@
         .op:hover {
             opacity: 1
         }
-        body{
-            background-image: url("img/shutterstock.jpg");
-        }
     </style>
 </head>
 <body>
